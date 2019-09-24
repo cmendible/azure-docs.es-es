@@ -1,6 +1,6 @@
 ---
-title: Planeamiento de una red virtual para Azure HDInsight
-description: Aprenda a planear la implementación de una red virtual de Azure para conectar HDInsight con otros recursos en la nube o con recursos de su centro de datos.
+title: Planificación de una red virtual para Azure HDInsight
+description: Aprenda a planificar la implementación de una red virtual de Azure para conectar HDInsight con otros recursos en la nube o con recursos de su centro de datos.
 author: hrasheed-msft
 ms.author: hrasheed
 ms.reviewer: jasonh
@@ -15,9 +15,9 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71077022"
 ---
-# <a name="plan-a-virtual-network-for-azure-hdinsight"></a>Planeamiento de una red virtual para Azure HDInsight
+# <a name="plan-a-virtual-network-for-azure-hdinsight"></a>Planificación de una red virtual para Azure HDInsight
 
-En este artículo se proporciona información general acerca del uso de [redes virtuales de Azure](../virtual-network/virtual-networks-overview.md) con Azure HDInsight. También se explican las decisiones de diseño e implementación que se deben realizar para poder implementar una red virtual para un clúster de HDInsight. Una vez que finalice la fase de planeamiento, puede pasar a [Creación de redes virtuales para clústeres de Azure HDInsight](hdinsight-create-virtual-network.md). Para más información acerca de las direcciones IP de administración de HDInsight necesarias para configurar correctamente los grupos de seguridad de red y las rutas definidas por el usuario, consulte [Direcciones IP de administración de HDInsight](hdinsight-management-ip-addresses.md).
+En este artículo se proporciona información general acerca del uso de [redes virtuales de Azure](../virtual-network/virtual-networks-overview.md) con Azure HDInsight. También se explican las decisiones de diseño e implementación que se deben realizar para poder implementar una red virtual para un clúster de HDInsight. Una vez que finalice la fase de planificación, puede pasar a [Creación de redes virtuales para clústeres de Azure HDInsight](hdinsight-create-virtual-network.md). Para más información acerca de las direcciones IP de administración de HDInsight necesarias para configurar correctamente los grupos de seguridad de red y las rutas definidas por el usuario, consulte [Direcciones IP de administración de HDInsight](hdinsight-management-ip-addresses.md).
 
 El uso de una instancia de Azure Virtual Network permite los siguientes escenarios:
 
@@ -132,7 +132,7 @@ La resolución de nombres predeterminada __no__ permite que HDInsight resuelva l
 
 Para habilitar la resolución de nombres entre la red virtual y los recursos en redes combinadas, debe realizar las siguientes acciones:
 
-1. Cree un servidor DNS personalizado en la instancia de Azure Virtual Network en la que planea instalar HDInsight.
+1. Cree un servidor DNS personalizado en la instancia de Azure Virtual Network en la que planificar instalar HDInsight.
 
 2. Configure la red virtual para usar el servidor DNS personalizado.
 
@@ -217,7 +217,7 @@ Como un servicio administrado, HDInsight requiere acceso sin restricciones a los
 
 ### <a name="hdinsight-with-network-security-groups"></a>HDInsight con grupos de seguridad de red
 
-Si planea usar **grupos de seguridad de red** para controlar el tráfico de red, realice las siguientes acciones antes de instalar HDInsight:
+Si planificar usar **grupos de seguridad de red** para controlar el tráfico de red, realice las siguientes acciones antes de instalar HDInsight:
 
 1. Identificar la región de Azure que va a usar para HDInsight.
 
@@ -243,7 +243,7 @@ Si usa grupos de seguridad de red o rutas definidas por el usuario para controla
     
 ## <a id="hdinsight-ports"></a> Puertos necesarios
 
-Si planea usar un **firewall** para obtener acceso al clúster fuera de determinados puertos, debe permitir el tráfico en esos puertos, ya que son necesarios para su escenario. De manera predeterminada, no se necesita una lista blanca especial de puertos, siempre que el tráfico de administración de Azure que se explica en la sección anterior tenga permitido llegar al clúster en el puerto 443.
+Si planifica usar un **firewall** para obtener acceso al clúster fuera de determinados puertos, debe permitir el tráfico en esos puertos, ya que son necesarios para su escenario. De manera predeterminada, no se necesita una lista blanca especial de puertos, siempre que el tráfico de administración de Azure que se explica en la sección anterior tenga permitido llegar al clúster en el puerto 443.
 
 Para una lista de puertos para servicios específicos, consulte el documento [Puertos utilizados por los servicios Apache Hadoop en HDInsight](hdinsight-hadoop-port-settings-for-services.md).
 
